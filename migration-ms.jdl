@@ -1,0 +1,49 @@
+enum OrganizationStatus {
+  ACTIVE, INACTIVE, BLOCKED
+}
+
+enum ChangelogStatus {
+  ACTIVE, INACTIVE
+}
+
+entity Organization {
+  id Long
+  tenantId Long required
+  status OrganizationStatus
+}
+
+entity OrganizationMicroservice {
+  id Long
+  version Integer required
+  updated Boolean required
+}
+
+entity Microservice {
+  id Long
+  name String maxlength(250) required
+  version Integer required
+  updated Boolean required
+}
+
+entity Changelog {
+  id Long
+  name String maxlength(4000) required
+  originalName String maxlength(4000) required
+  path String minlength(1) maxlength(4000) required
+  filesize Long required
+  status ChangelogStatus required
+}
+
+relationship ManyToOne {
+  Changelog{microservice} to Microservice
+}
+
+relationship OneToOne {
+  OrganizationMicroservice{microservice} to Microservice
+  OrganizationMicroservice{organization} to Organization
+}
+
+dto * with mapstruct
+service * with serviceImpl
+paginate * with pagination
+filter *
