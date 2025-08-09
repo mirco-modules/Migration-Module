@@ -78,7 +78,6 @@ class MicroserviceCriteriaTest {
         microserviceCriteria.name();
         microserviceCriteria.version();
         microserviceCriteria.updated();
-        microserviceCriteria.organizationMicroserviceId();
         microserviceCriteria.distinct();
     }
 
@@ -89,7 +88,6 @@ class MicroserviceCriteriaTest {
                 condition.apply(criteria.getName()) &&
                 condition.apply(criteria.getVersion()) &&
                 condition.apply(criteria.getUpdated()) &&
-                condition.apply(criteria.getOrganizationMicroserviceId()) &&
                 condition.apply(criteria.getDistinct()),
             "every filter matches"
         );
@@ -105,7 +103,6 @@ class MicroserviceCriteriaTest {
                 condition.apply(criteria.getName(), copy.getName()) &&
                 condition.apply(criteria.getVersion(), copy.getVersion()) &&
                 condition.apply(criteria.getUpdated(), copy.getUpdated()) &&
-                condition.apply(criteria.getOrganizationMicroserviceId(), copy.getOrganizationMicroserviceId()) &&
                 condition.apply(criteria.getDistinct(), copy.getDistinct()),
             "every filter matches"
         );

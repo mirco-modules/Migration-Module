@@ -5,6 +5,7 @@ import static org.khasanof.migration.domain.OrganizationMicroserviceTestSamples.
 import static org.khasanof.migration.domain.OrganizationTestSamples.*;
 
 import org.junit.jupiter.api.Test;
+import org.khasanof.migration.domain.common.Organization;
 import org.khasanof.migration.web.rest.TestUtil;
 
 class OrganizationTest {
@@ -21,19 +22,5 @@ class OrganizationTest {
 
         organization2 = getOrganizationSample2();
         assertThat(organization1).isNotEqualTo(organization2);
-    }
-
-    @Test
-    void organizationMicroserviceTest() throws Exception {
-        Organization organization = getOrganizationRandomSampleGenerator();
-        OrganizationMicroservice organizationMicroserviceBack = getOrganizationMicroserviceRandomSampleGenerator();
-
-        organization.setOrganizationMicroservice(organizationMicroserviceBack);
-        assertThat(organization.getOrganizationMicroservice()).isEqualTo(organizationMicroserviceBack);
-        assertThat(organizationMicroserviceBack.getOrganization()).isEqualTo(organization);
-
-        organization.organizationMicroservice(null);
-        assertThat(organization.getOrganizationMicroservice()).isNull();
-        assertThat(organizationMicroserviceBack.getOrganization()).isNull();
     }
 }

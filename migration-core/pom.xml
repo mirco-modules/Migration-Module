@@ -8,11 +8,11 @@
         <version>3.1.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>org.khasanof.migration</groupId>
     <artifactId>migration-core</artifactId>
     <version>1.0.0</version>
-    <name>migration-core</name>
-    <description>migration-core</description>
+    <name>Migration Core</name>
 
     <url/>
 

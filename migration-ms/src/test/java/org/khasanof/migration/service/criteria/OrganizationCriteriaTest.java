@@ -77,7 +77,6 @@ class OrganizationCriteriaTest {
         organizationCriteria.id();
         organizationCriteria.tenantId();
         organizationCriteria.status();
-        organizationCriteria.organizationMicroserviceId();
         organizationCriteria.distinct();
     }
 
@@ -87,7 +86,6 @@ class OrganizationCriteriaTest {
                 condition.apply(criteria.getId()) &&
                 condition.apply(criteria.getTenantId()) &&
                 condition.apply(criteria.getStatus()) &&
-                condition.apply(criteria.getOrganizationMicroserviceId()) &&
                 condition.apply(criteria.getDistinct()),
             "every filter matches"
         );
@@ -102,7 +100,6 @@ class OrganizationCriteriaTest {
                 condition.apply(criteria.getId(), copy.getId()) &&
                 condition.apply(criteria.getTenantId(), copy.getTenantId()) &&
                 condition.apply(criteria.getStatus(), copy.getStatus()) &&
-                condition.apply(criteria.getOrganizationMicroserviceId(), copy.getOrganizationMicroserviceId()) &&
                 condition.apply(criteria.getDistinct(), copy.getDistinct()),
             "every filter matches"
         );

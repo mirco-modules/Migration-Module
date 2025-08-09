@@ -11,6 +11,8 @@
     <name>Migration Module</name>
 
     <modules>
+        <module>migration-core</module>
+        <module>migration-resource</module>
         <module>migration-ms</module>
     </modules>
 
