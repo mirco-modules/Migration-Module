@@ -10,7 +10,7 @@
         Added the entity Organization.
     -->
     <changeSet id="20250806191402-1" author="jhipster">
-        <createTable tableName="organization">
+        <createTable tableName="mg_organization">
             <column name="id" type="bigint">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
@@ -28,7 +28,7 @@
 
     <!-- Added the entity audit columns -->
     <changeSet id="20250806191402-audit-1" author="jhipster-entity-audit">
-        <addColumn tableName="organization">
+        <addColumn tableName="mg_organization">
             <column name="created_by" type="varchar(50)" defaultValue="system">
                 <constraints nullable="false"/>
             </column>
@@ -56,7 +56,7 @@
         <loadData
                   file="config/liquibase/fake-data/organization.csv"
                   separator=";"
-                  tableName="organization"
+                  tableName="mg_organization"
                   usePreparedStatements="true">
             <column name="id" type="numeric"/>
             <column name="tenant_id" type="numeric"/>

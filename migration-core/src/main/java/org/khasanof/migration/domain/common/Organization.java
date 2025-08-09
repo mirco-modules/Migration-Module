@@ -11,7 +11,7 @@ import org.khasanof.migration.domain.common.enumeration.OrganizationStatus;
  */
 @Entity
 @Common
-@Table(name = "organization")
+@Table(name = "mg_organization")
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class Organization extends AbstractAuditingEntity {
 

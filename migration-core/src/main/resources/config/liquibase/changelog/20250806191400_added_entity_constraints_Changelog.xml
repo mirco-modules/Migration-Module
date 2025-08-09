@@ -11,10 +11,10 @@
     <changeSet id="20250806191400-2" author="jhipster">
 
         <addForeignKeyConstraint baseColumnNames="microservice_id"
-                                 baseTableName="changelog"
+                                 baseTableName="mg_changelog"
                                  constraintName="fk_changelog__microservice_id"
                                  referencedColumnNames="id"
-                                 referencedTableName="microservice"
+                                 referencedTableName="mg_microservice"
                                  />
     </changeSet>
 </databaseChangeLog>

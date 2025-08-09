@@ -13,7 +13,7 @@ import org.khasanof.migration.domain.common.enumeration.ChangelogStatus;
  */
 @Entity
 @Common
-@Table(name = "changelog")
+@Table(name = "mg_changelog")
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class Changelog extends AbstractAuditingEntity {
 

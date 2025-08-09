@@ -1,0 +1,45 @@
+{
+  "annotations": {
+    "changelogDate": "20250806191403"
+  },
+  "applications": "*",
+  "clientRootFolder": "migrationMs",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "version",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "updated",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "microserviceName": "migrationMs",
+  "name": "OrganizationMicroservice",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "microservice",
+      "relationshipName": "microservice",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "organization",
+      "relationshipName": "organization",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

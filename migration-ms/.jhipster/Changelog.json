@@ -1,0 +1,59 @@
+{
+  "annotations": {
+    "changelogDate": "20250806191400"
+  },
+  "applications": "*",
+  "clientRootFolder": "migrationMs",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "4000"
+    },
+    {
+      "fieldName": "originalName",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "4000"
+    },
+    {
+      "fieldName": "path",
+      "fieldType": "String",
+      "fieldValidateRules": ["minlength", "maxlength", "required"],
+      "fieldValidateRulesMaxlength": "4000",
+      "fieldValidateRulesMinlength": "1"
+    },
+    {
+      "fieldName": "filesize",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "ChangelogStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "ACTIVE,INACTIVE"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "microserviceName": "migrationMs",
+  "name": "Changelog",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "microservice",
+      "relationshipName": "microservice",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

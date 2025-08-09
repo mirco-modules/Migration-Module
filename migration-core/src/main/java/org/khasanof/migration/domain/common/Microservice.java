@@ -1,6 +1,5 @@
 package org.khasanof.migration.domain.common;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -12,7 +11,7 @@ import org.khasanof.core.domain.AbstractAuditingEntity;
  */
 @Entity
 @Common
-@Table(name = "microservice")
+@Table(name = "mg_microservice")
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class Microservice extends AbstractAuditingEntity {
 

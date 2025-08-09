@@ -11,7 +11,7 @@ import org.khasanof.core.domain.AbstractAuditingEntity;
  */
 @Entity
 @Common
-@Table(name = "organization_microservice")
+@Table(name = "mg_organization_microservice")
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class OrganizationMicroservice extends AbstractAuditingEntity {
 

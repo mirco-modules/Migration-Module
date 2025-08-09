@@ -10,7 +10,7 @@
         Added the entity Changelog.
     -->
     <changeSet id="20250806191400-1" author="jhipster">
-        <createTable tableName="changelog">
+        <createTable tableName="mg_changelog">
             <column name="id" type="bigint">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
@@ -40,7 +40,7 @@
 
     <!-- Added the entity audit columns -->
     <changeSet id="20250806191400-audit-1" author="jhipster-entity-audit">
-        <addColumn tableName="changelog">
+        <addColumn tableName="mg_changelog">
             <column name="created_by" type="varchar(50)" defaultValue="system">
                 <constraints nullable="false"/>
             </column>
@@ -68,7 +68,7 @@
         <loadData
                   file="config/liquibase/fake-data/changelog.csv"
                   separator=";"
-                  tableName="changelog"
+                  tableName="mg_changelog"
                   usePreparedStatements="true">
             <column name="id" type="numeric"/>
             <column name="name" type="string"/>

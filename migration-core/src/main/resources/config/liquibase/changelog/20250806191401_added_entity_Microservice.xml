@@ -10,7 +10,7 @@
         Added the entity Microservice.
     -->
     <changeSet id="20250806191401-1" author="jhipster">
-        <createTable tableName="microservice">
+        <createTable tableName="mg_microservice">
             <column name="id" type="bigint">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
@@ -31,7 +31,7 @@
 
     <!-- Added the entity audit columns -->
     <changeSet id="20250806191401-audit-1" author="jhipster-entity-audit">
-        <addColumn tableName="microservice">
+        <addColumn tableName="mg_microservice">
             <column name="created_by" type="varchar(50)" defaultValue="system">
                 <constraints nullable="false"/>
             </column>
@@ -59,7 +59,7 @@
         <loadData
                   file="config/liquibase/fake-data/microservice.csv"
                   separator=";"
-                  tableName="microservice"
+                  tableName="mg_microservice"
                   usePreparedStatements="true">
             <column name="id" type="numeric"/>
             <column name="name" type="string"/>

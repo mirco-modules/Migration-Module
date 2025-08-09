@@ -1,0 +1,32 @@
+{
+  "annotations": {
+    "changelogDate": "20250806191402"
+  },
+  "applications": "*",
+  "clientRootFolder": "migrationMs",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "tenantId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "OrganizationStatus",
+      "fieldValues": "ACTIVE,INACTIVE,BLOCKED"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "microserviceName": "migrationMs",
+  "name": "Organization",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}
